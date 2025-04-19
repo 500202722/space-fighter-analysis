@@ -10,7 +10,7 @@ using namespace KatanaEngine;
 
 SpaceFighter::SpaceFighter()
 {
-	SetScreenResolution(1600, 900);
+	SetScreenResolution(1000, 500);
 	SetFullScreen(false);
 
 	InitializeScreenManager();

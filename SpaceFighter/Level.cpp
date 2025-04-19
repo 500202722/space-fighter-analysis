@@ -137,7 +137,9 @@ void Level::Update(const GameTime& gameTime)
 		}
 	}
 	
-	for (Explosion *pExplosion : s_explosions) pExplosion->Update(gameTime);
+	for (Explosion * pExplosion : s_explosions) {
+		pExplosion->Update(gameTime);
+	}
 
 	if (!m_pPlayerShip->IsActive()) GetGameplayScreen()->Exit();
 }
@@ -199,6 +201,7 @@ void Level::SpawnExplosion(GameObject *pExplodingObject)
 	const float dramaticEffect = 2.2f;
 	const float scale = scaleToObjectSize * dramaticEffect;
 	pExplosion->Activate(pExplodingObject->GetPosition(), scale);
+	std::cout << "Ship Destroyed!\n";
 }
 
 
